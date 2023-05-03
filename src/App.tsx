@@ -4,13 +4,15 @@ import { ThemeProvider } from "styled-components";
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { theme } from 'constants/theme';
+import Home from 'pages/home';
 
 function App() {
   return (
     <BrowserRouter>
-       <ThemeProvider theme={theme}>
-
-       </ThemeProvider>
+    <Home />
+       {/* <ThemeProvider theme={theme}>
+        
+       </ThemeProvider> */}
     </BrowserRouter>
   );
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import HomePge from 'views/home';
+import NavHome from 'views/navbar.view';
 
-const HomePage = () => {
+const Home = () => {
   return (
-    <div>HomePage</div>
+    <div><NavHome /><HomePge /></div>
   )
 }
 
-export default HomePage;
+export default Home;

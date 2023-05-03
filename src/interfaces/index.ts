@@ -14,7 +14,7 @@ export interface ITheme{
        white: string;
        black: string;
        grey: string;
-       blue: string;
+    //    blue: string;
     };
 
     font:{
