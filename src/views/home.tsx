@@ -1,4 +1,4 @@
-import HomeSec from 'Components/Home'
+import HomeSec from 'components/Home'
 import React from 'react'
 
 const HomePge = () => {
