@@ -6,6 +6,7 @@ import { GrSend } from "react-icons/gr";
 import {TbCircleArrowUpRight} from "react-icons/tb"
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
 import Typewriter from "typewriter-effect";
+import portimage from "assets/images/portfo.jpeg"
 import {
   MainContainer,
   Container,
@@ -37,7 +38,7 @@ const HomeSec = () => {
                     autoStart: true,
                     loop: true,
                     delay: 40,
-                    strings: ["Web Developer", "Frontend Developer"],
+                    strings: ["Web Developer", "Frontend Developer", "UI Developer"],
                   }}
                 />
               </span>
@@ -72,7 +73,7 @@ const HomeSec = () => {
           </ButtonContainer>
         </LeftContainer>
         <RightContainer>
-          <Image />
+          <Image src={portimage} />
         </RightContainer>
       </Container>
     </MainContainer>

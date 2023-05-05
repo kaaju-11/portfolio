@@ -5,6 +5,7 @@ export const Unorderli = styled.ul`
   display: flex;
   justify-content: center;
   gap: 40px;
+  padding: 20px;
 `;
 export const Listitems = styled.li`
   display: flex;

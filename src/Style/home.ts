@@ -9,9 +9,10 @@ export const Container = styled.div`
   /* position: relative; */
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 70px 10% 0;
+  gap:350px;
 `;
 export const LeftContainer = styled.div`
   max-width: 600px;
@@ -144,8 +145,11 @@ export const SocialIcon = styled.div`
 export const RightContainer = styled.div`
   max-width: 450px;
 `;
-export const Image = styled.div`
-  font-size: 15px;
+export const Image = styled.img`
+  /* height:450px;
+  width:450px; */
+   width: 400px;
+  height:400px
 `;
 // export const NameContain = styled.div`
 //    font-size:15px;
