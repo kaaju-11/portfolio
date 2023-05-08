@@ -110,7 +110,7 @@ export const ButtonWrapper = styled.div`
   height: 44px;
   
 `;
-export const Button = styled.div`
+export const Button = styled.button`
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -120,4 +120,32 @@ export const Button = styled.div`
   text-align: center;
   font-weight: 600;
   box-shadow: 0 0 20px #6600cc;
+`;
+
+export const OpenButton = styled.button`
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #6600cc;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #6600cc;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hithere 1s ease infinite;
+
+  &:hover {
+    background-color: #6600cc;
+    color: white;
+    box-shadow: 0 0 20px #6600cc;
+  }
+
+@keyframes hithere {
+  40%, 60% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+  70% { transform: rotate(0deg) ; }
+}
 `;

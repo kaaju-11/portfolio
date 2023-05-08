@@ -7,12 +7,13 @@ export const MainContainer = styled.div`
 `;
 export const Container = styled.div`
   /* position: relative; */
-  width: 100%;
+  /* width: 80%; */
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-around;
   align-items: center;
   padding: 70px 10% 0;
-  gap:350px;
+  /* gap:10px; */
+  /* border:1px solid red; */
 `;
 export const LeftContainer = styled.div`
   max-width: 600px;

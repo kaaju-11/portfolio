@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WrapperContainer = styled.div`
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 0px 50px;
   background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,10,241,0.6895133053221288) 22%, rgba(119,0,255,0.6446953781512605) 100%);
   display: flex;
@@ -9,7 +9,7 @@ export const WrapperContainer = styled.div`
   align-items: center;
   border:none;
   transition: 3s ease-in-out;
-  height:40vh;
+  height:45vh;
 `;
 export const Container = styled.div`
   max-width: 450px;
@@ -29,14 +29,13 @@ export const Heading = styled.div`
   gap: 5px;
   border-bottom: 2px dotted white;
   margin-top:0;
-
 `;
-export const GridContainer = styled.div`
+export const FlexContainer = styled.div`
   display: flex;
   gap: 70px;
   padding: 50px 0 50px 0;
 `;
-export const GridItem = styled.div`
+export const FlexItem = styled.div`
   border: 5px solid #d9e0ec;
   padding: 10px;
   text-align: center;
@@ -72,7 +71,7 @@ export const GridItem = styled.div`
   }
 `;
 export const SkilName = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

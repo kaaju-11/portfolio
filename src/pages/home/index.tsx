@@ -1,4 +1,7 @@
 import React from "react";
+import ContactHome from "views/Contact";
+import EducationHome from "views/edu";
+import FooterHome from "views/footer";
 import HomePge from "views/home";
 import NavHome from "views/navbar.view";
 import SkillHome from "views/skill.view";
@@ -10,7 +13,10 @@ const Home = () => {
       <NavHome />
       <HomePge />
       <SkillHome />
+      <EducationHome />
       <TestoHome />
+      <ContactHome />
+      <FooterHome />
     </div>
   );
 };
