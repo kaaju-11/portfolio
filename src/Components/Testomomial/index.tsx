@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
+import { Carousel } from "antd";
+import { BackwardOutlined, ForwardOutlined } from "@ant-design/icons";
+
 import {
   Header,
   WebName,
@@ -16,9 +19,13 @@ import {
   Button,
   Image,
   OpenButton,
+  CaroselContainer,
+  WCaroselContainer,
 } from "style/testomonial";
 import { FaPenAlt } from "react-icons/fa";
 import { Heading } from "style/skills";
+import { Container } from "style/home";
+import Column from "antd/es/table/Column";
 
 const customStyles = {
   content: {
@@ -34,6 +41,79 @@ const customStyles = {
   },
 };
 
+const SampleNextArrow = (props: {
+  className: any;
+  style: any;
+  onClick: any;
+}) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        color: "black",
+        fontSize: "15px",
+        lineHeight: "1.5715",
+      }}
+      onClick={onClick}
+    >
+      <ForwardOutlined />
+    </div>
+  );
+};
+
+const SamplePrevArrow = (props: {
+  className: any;
+  style: any;
+  onClick: any;
+}) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        color: "black",
+        fontSize: "15px",
+        lineHeight: "1.5715",
+      }}
+      onClick={onClick}
+    >
+      <BackwardOutlined />
+    </div>
+  );
+};
+const settings = {
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  nextArrow: (
+    <SampleNextArrow
+      className={undefined}
+      style={undefined}
+      onClick={undefined}
+    />
+  ),
+  prevArrow: (
+    <SamplePrevArrow
+      className={undefined}
+      style={undefined}
+      onClick={undefined}
+    />
+  ),
+};
+
+const contentStyle: React.CSSProperties = {
+  height: "160px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#6600cc",
+};
+
 const Testomonial = () => {
   const { register } = useForm();
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -43,20 +123,39 @@ const Testomonial = () => {
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
   }
+
   function closeModal() {
     setIsOpen(false);
   }
 
   return (
-    <div>
+    <Container style={{flexDirection:"column", marginBottom:"100px"}}>
       <Heading
         style={{
           color: "#6600cc",
-          borderBottom: " none",
+          borderBottom: "2px dotted #6600cc",
         }}
       >
         Testimonial
       </Heading>
+      <WCaroselContainer>
+        <CaroselContainer>
+          <Carousel arrows {...settings}>
+            <div>
+              <h3 style={contentStyle}>1</h3>
+            </div>
+            <div>
+              <h3 style={contentStyle}>2</h3>
+            </div>
+            <div>
+              <h3 style={contentStyle}>3</h3>
+            </div>
+            <div>
+              <h3 style={contentStyle}>4</h3>
+            </div>
+          </Carousel>
+        </CaroselContainer>
+      </WCaroselContainer>
       <OpenButton onClick={openModal}>
         <FaPenAlt />
       </OpenButton>
@@ -101,7 +200,7 @@ const Testomonial = () => {
           </Button>
         </ButtonWrapper>
       </Modal>
-    </div>
+    </Container>
   );
 };
 

@@ -58,9 +58,10 @@ export const AnkerTag = styled.a`
 export const SocialIcon = styled.div`
   font-size: 15px;
 `;
-// export const FooterContainer = styled.div`
+export const CvContainer = styled.div`
+    /* width:100%; */
 
-// `
+`
 // export const FooterContainer = styled.div`
 
 // `

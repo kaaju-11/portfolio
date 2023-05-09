@@ -149,3 +149,17 @@ export const OpenButton = styled.button`
   70% { transform: rotate(0deg) ; }
 }
 `;
+
+export const CaroselContainer = styled.div`
+   width:600px;
+   box-shadow: 0 0 20px #6600cc;
+   position: relative;
+`
+
+export const WCaroselContainer = styled.div`
+display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  
+`

@@ -2,11 +2,24 @@ import React from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
-import { ChildContainer, FooterContainer, Para, AnkerTag, SocialSec  } from "style/footer";
+import { ChildContainer, FooterContainer, Para, AnkerTag, SocialSec,CvContainer  } from "style/footer";
 import { Heading } from "style/skills";
+import fileSaver from 'file-saver';
+import { Button } from "style/testomonial";
 
 const Footer = () => {
+  const saveFile = () => {
+    fileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resume/cv.pdf",
+      "MyCV.pdf"
+    );
+  }
   return (
+    <CvContainer>
+      <Button onClick={saveFile}>
+    Download CV
+</Button>
+
     <FooterContainer>
       <ChildContainer>
         <Heading style={{border:"none", color:"black"}}>Web Developer</Heading>
@@ -36,7 +49,8 @@ const Footer = () => {
         </SocialSec>
       </ChildContainer>
     </FooterContainer>
+    </CvContainer>
   );
 };
 
-export default Footer;
+export default Footer

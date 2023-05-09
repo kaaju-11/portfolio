@@ -6,14 +6,10 @@ export const MainContainer = styled.div`
   /* background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%); */
 `;
 export const Container = styled.div`
-  /* position: relative; */
-  /* width: 80%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 70px 10% 0;
-  /* gap:10px; */
-  /* border:1px solid red; */
 `;
 export const LeftContainer = styled.div`
   max-width: 600px;

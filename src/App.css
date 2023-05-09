@@ -1,3 +1,26 @@
 *{
   margin: 0;
 }
+
+/* .slick-active{
+  width: 500px;
+} */
+
+.ant-carousel .slick-next::before{
+  content: " ";
+}
+.ant-carousel .slick-prev::before {
+  content: " ";
+}
+.ant-carousel .slick-next{
+  position:absolute;
+  right:5%;
+}
+.slick-prev{
+   margin-left: 10%;
+   z-index: 3;
+}
+.anticon svg{
+  color:white;
+  font-size: 23px;
+}

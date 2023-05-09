@@ -1,5 +1,5 @@
 import React from "react";
-import ContactHome from "views/Contact";
+import ContactHome from "views/Contact/Contact";
 import EducationHome from "views/edu";
 import FooterHome from "views/footer";
 import HomePge from "views/home";
