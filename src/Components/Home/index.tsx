@@ -21,7 +21,7 @@ import {
   SocialIcon,
   RightContainer,
   Image,
-} from "style/home";
+} from "style/Home";
 
 const HomeSec = () => {
   return (

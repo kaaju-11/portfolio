@@ -1,11 +1,11 @@
 import React from "react";
-import ContactHome from "views/Contact/Contact";
-import EducationHome from "views/edu";
-import FooterHome from "views/footer";
-import HomePge from "views/home";
-import NavHome from "views/navbar.view";
-import SkillHome from "views/skill.view";
-import TestoHome from "views/tesomonial";
+import ContactHome from "views/Contact";
+import EducationHome from "views/Education";
+import FooterHome from "views/Footer";
+import HomePge from "views/Home";
+import NavHome from "views/Navbar";
+import SkillHome from "views/Skill";
+import TestoHome from "views/Testomonial";
 
 const Home = () => {
   return (

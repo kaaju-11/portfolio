@@ -4,7 +4,7 @@ import {
   Container,
   FlexContainer,
   Heading,
-} from "style/skills";
+} from "style/Skill";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -14,7 +14,7 @@ import {
   Date,
   Degree,
   AboutDegree,
-} from "style/education";
+} from "style/Education";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaUserGraduate } from "react-icons/fa";
 

@@ -7,9 +7,9 @@ import {
   Label,
   Textarea,
   TextareaWrapper,
-} from "style/testomonial";
-import { MainContiner, ContactContainer } from "style/contact";
-import { Heading } from "style/skills";
+} from "style/Testomonial";
+import { MainContiner, ContactContainer } from "style/Contact";
+import { Heading } from "style/Skill";
 import { MdContactPhone } from "react-icons/md";
 
 const Contacts = () => {

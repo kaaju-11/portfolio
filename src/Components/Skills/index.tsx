@@ -14,7 +14,7 @@ import {
   Heading,
   WrapperContainer,
   SkilName,
-} from "style/skills";
+} from "style/Skill";
 
 const SkillsSec = () => {
   return (
@@ -99,10 +99,16 @@ const SkillsSec = () => {
           </SkilName>
 
           <SkilName>
-              <FlexItem><BiGitMerge /></FlexItem>
-              <h3 style={{color:"white", marginRight:"8px", marginTop:"-15px"}}>Git</h3>
-              </SkilName>
-              <SkilName></SkilName>
+            <FlexItem>
+              <BiGitMerge />
+            </FlexItem>
+            <h3
+              style={{ color: "white", marginRight: "8px", marginTop: "-15px" }}
+            >
+              Git
+            </h3>
+          </SkilName>
+          <SkilName></SkilName>
         </FlexContainer>
       </Container>
     </WrapperContainer>

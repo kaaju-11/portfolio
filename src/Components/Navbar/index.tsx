@@ -3,7 +3,7 @@ import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineEventNote, MdOutlinePermContactCalendar} from "react-icons/md"
 import {FaProjectDiagram} from "react-icons/fa"
 import {RiContactsFill} from "react-icons/ri"
-import {Header, Unorderli, Listitems } from 'style/nav'
+import {Header, Unorderli, Listitems } from 'style/Navbar'
 
 const Navbar = () => {
   return (

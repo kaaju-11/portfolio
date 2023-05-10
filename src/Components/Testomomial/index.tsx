@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import { Carousel } from "antd";
 import { BackwardOutlined, ForwardOutlined } from "@ant-design/icons";
-
+import Slider from "react-slick";
 import {
   Header,
   WebName,
@@ -21,10 +21,10 @@ import {
   OpenButton,
   CaroselContainer,
   WCaroselContainer,
-} from "style/testomonial";
+} from "style/Testomonial";
 import { FaPenAlt } from "react-icons/fa";
-import { Heading } from "style/skills";
-import { Container } from "style/home";
+import { Heading } from "style/Skill";
+import { Container } from "style/Home";
 import Column from "antd/es/table/Column";
 
 const customStyles = {
@@ -114,6 +114,12 @@ const contentStyle: React.CSSProperties = {
   background: "#6600cc",
 };
 
+const details = {
+  id: 0,
+  title: "",
+  decreption: "",
+};
+
 const Testomonial = () => {
   const { register } = useForm();
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -129,7 +135,7 @@ const Testomonial = () => {
   }
 
   return (
-    <Container style={{flexDirection:"column", marginBottom:"100px"}}>
+    <Container style={{ flexDirection: "column", marginBottom: "100px" }}>
       <Heading
         style={{
           color: "#6600cc",
@@ -187,7 +193,7 @@ const Testomonial = () => {
             </Label>
             <TextareaWrapper>
               <Textarea
-                {...register("aboutYou")}
+                {...register("decreption")}
                 placeholder="Enter the Job Description"
               />
             </TextareaWrapper>

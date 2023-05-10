@@ -45,35 +45,7 @@ export const Header = styled.div`
   height: 10vh;
   /* background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%); */
   z-index: 5;
-  box-shadow:5px
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  [5px 10px gray;
+  box-shadow:5px 5px 10px gray;
   
 `;
 // export const Unorderli = styled.ul`

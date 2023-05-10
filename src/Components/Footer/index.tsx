@@ -2,10 +2,10 @@ import React from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
-import { ChildContainer, FooterContainer, Para, AnkerTag, SocialSec,CvContainer  } from "style/footer";
-import { Heading } from "style/skills";
+import { ChildContainer, FooterContainer, Para, AnkerTag, SocialSec,CvContainer  } from "style/Footer";
+import { Heading } from "style/Skill";
 import fileSaver from 'file-saver';
-import { Button } from "style/testomonial";
+import { Button } from "style/Testomonial";
 
 const Footer = () => {
   const saveFile = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContainer, Container } from 'style/home'
+import { MainContainer, Container } from 'style/Home'
 
 const ProjectSec = () => {
   return (
