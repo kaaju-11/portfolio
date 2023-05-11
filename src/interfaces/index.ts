@@ -26,3 +26,9 @@ export interface ITheme{
         secondary:string,
     }
 }
+
+export interface ValueObject{
+    id:number, 
+    title: string,
+    decreption:string
+}

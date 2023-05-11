@@ -1,9 +1,14 @@
 import Testomonial from 'components/Testomomial'
-import React from 'react'
+import { ValueObject } from 'interfaces';
+import React, { useState } from 'react'
 
 const TestoHome = () => {
+  const [val, setVal] = useState<ValueObject[]>([]);
+  const addTesto = (testo: ValueObject) =>{
+      setVal([testo, ...val]);
+  }
   return (
-    <div><Testomonial /></div>
+    <div><Testomonial addModalTest={addTesto}/></div>
   )
 }
 

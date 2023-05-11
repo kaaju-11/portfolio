@@ -1,4 +1,3 @@
-import React from "react";
 import ContactHome from "views/Contact";
 import EducationHome from "views/Education";
 import FooterHome from "views/Footer";

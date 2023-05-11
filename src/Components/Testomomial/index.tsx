@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import { Carousel } from "antd";
 import { BackwardOutlined, ForwardOutlined } from "@ant-design/icons";
-import Slider from "react-slick";
+import { v4 as uuid } from "uuid";
 import {
   Header,
   WebName,
@@ -25,7 +25,9 @@ import {
 import { FaPenAlt } from "react-icons/fa";
 import { Heading } from "style/Skill";
 import { Container } from "style/Home";
-import Column from "antd/es/table/Column";
+import { ValueObject } from "interfaces";
+import Typography from "antd/es/typography/Typography";
+import styled from "styled-components";
 
 const customStyles = {
   content: {
@@ -114,13 +116,42 @@ const contentStyle: React.CSSProperties = {
   background: "#6600cc",
 };
 
+const Error = styled(Typography)`
+  color:red;
+  padding: 10px;
+`
+
 const details = {
   id: 0,
   title: "",
   decreption: "",
 };
 
-const Testomonial = () => {
+interface IProps{
+  addModalTest: (testo: ValueObject) => void; 
+}
+
+const Testomonial: React.FC<IProps>= ({addModalTest}) => {
+  const [error, setError] = useState<string>('');
+  const [testo, setTesto] = useState<ValueObject>(details);
+  const onValueChange = (e: any) => {
+    // console.log(e.target.name, e.target.value);
+    if(error){
+      setError('');
+    }
+    setTesto({ ...testo, [e.target.name]: e.target.value });
+    console.log(testo);
+  };
+
+  const onHandleSubmit = () => {
+    setTesto(details);
+    if(!testo.title && !testo.decreption){
+      setError("All fields are mandarory");
+      return;
+    }
+    addModalTest({...testo, id:uuid()})
+  };
+
   const { register } = useForm();
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -183,7 +214,12 @@ const Testomonial = () => {
               <Label>
                 Your Name<sup>*</sup>
               </Label>
-              <Input {...register("title")} placeholder="Enter Title" />
+              <Input
+                {...register("title")}
+                placeholder="Enter Title"
+                name="title"
+                onChange={(e) => onValueChange(e)}
+              />
             </InputWrapper>
             <InputWrapper></InputWrapper>
           </InputContainer>
@@ -195,16 +231,22 @@ const Testomonial = () => {
               <Textarea
                 {...register("decreption")}
                 placeholder="Enter the Job Description"
+                name="decreption"
+                onChange={(e) => onValueChange(e)}
               />
             </TextareaWrapper>
           </InputWrapper>
         </Form>
         <ButtonWrapper>
           <Button onClick={openModal}>Cancel</Button>
-          <Button style={{ backgroundColor: "#1D2E88", color: "white" }}>
+          <Button
+            style={{ backgroundColor: "#1D2E88", color: "white" }}
+            onClick={onHandleSubmit}
+          >
             Submit
           </Button>
         </ButtonWrapper>
+        {error && <Error>{error}</Error> }
       </Modal>
     </Container>
   );
