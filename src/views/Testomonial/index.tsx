@@ -8,7 +8,7 @@ const TestoHome = () => {
       setVal([testo, ...val]);
   }
   return (
-    <div><Testomonial addModalTest={addTesto}/></div>
+    <div><Testomonial addModalTest={addTesto} /></div>
   )
 }
 
