@@ -1,4 +1,4 @@
-import Educations from 'components/Education';
+
 import React from 'react'
 
 const EducationHome  = () => {
