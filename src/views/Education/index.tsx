@@ -1,4 +1,5 @@
 
+import Educations from 'Components/Education';
 import React from 'react'
 
 const EducationHome  = () => {
