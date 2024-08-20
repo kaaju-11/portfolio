@@ -1,71 +1,86 @@
-import React from "react";
-import {
-  WrapperContainer,
-  Container,
-  FlexContainer,
-  Heading,
-} from "style/Skill";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
 import {
   MainContainer,
   Box,
   BoxContainer,
-  Date,
+  DateWrapper,
   Degree,
   AboutDegree,
+  BoxWrapper,
+  EducationWrapper,
+  SecondEduWrapper,
+  IconWrap,
+  CarDivider,
+  CarTraveller,
 } from "style/Education";
-import { GiGraduateCap } from "react-icons/gi";
 import { FaUserGraduate } from "react-icons/fa";
+import { CollegeHeading, Heading } from "style/Skill";
+import CarSvg from "assets/svg/CarSvg";
 
 const Educations = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-    <MainContainer style={{ background: "none" }}>
-      <Container>
+    <MainContainer ref={ref}>
+      <EducationWrapper>
         <Heading
           style={{
-            color: "#6600cc",
-            borderBottom: " 2px dotted #6600cc",
-            margin: "60px",
+            animation: inView ? "fadeInAndMoveDown 2s ease-out" : "none",
           }}
         >
           <FaUserGraduate />
-          Educaton
+          Education
         </Heading>
         <BoxContainer>
-          <Box>
-            <Date>2020-2023</Date>
-            <Degree>High School Degree</Degree>
-            <AboutDegree>
-              The standard Lorem Ipsum passage is: Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam.
-              consequat.Lorem Ipsum is a piece of text, used by designers to
-              fill a space where the content will eventually sit. It helps show
-              how text will look once a piece of content is finished, during the
-              planning phase.
-            </AboutDegree>
+          <Box
+            style={{
+              animation: inView ? "fadeInAndMoveRight1 1.5s ease-out" : "none",
+            }}
+          >
+            <IconWrap>
+              <FaUserGraduate />
+            </IconWrap>
+            <div>
+              <CollegeHeading>Rajindra Mishra College</CollegeHeading>
+              <Degree>Bechlor of Computer Application</Degree>
+              <DateWrapper>August 2017 - February 2021</DateWrapper>
+              <AboutDegree>
+                - Major: Electronics and Communication Engineering
+              </AboutDegree>
+              <AboutDegree>- Minor: Information Technology</AboutDegree>
+            </div>
           </Box>
-          <Box>
-            <Date>2020-2023</Date>
-            <Degree>High School Degree</Degree>
-            <AboutDegree>
-              The standard Lorem Ipsum passage is: Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam. consequat
-            </AboutDegree>
-          </Box>
-          <Box>
-            <Date>2020-2023</Date>
-            <Degree>High School Degree</Degree>
-            <AboutDegree>
-              The standard Lorem Ipsum passage is: Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam. consequat
-            </AboutDegree>
-          </Box>
+          <BoxWrapper
+            style={{
+              animation: inView ? "fadeInAndMoveRight2 1.5s ease-out" : "none",
+            }}
+          >
+            <SecondEduWrapper>
+              <IconWrap>
+                <FaUserGraduate />
+              </IconWrap>
+              <div>
+                <CollegeHeading>Lovely Professional University</CollegeHeading>
+                <Degree>Master of Computer Application</Degree>
+                <DateWrapper>May 2021 - August 2023</DateWrapper>
+                <AboutDegree>
+                  - Major: Electronics and Communication Engineering
+                </AboutDegree>
+                <AboutDegree>- Minor: Information Technology</AboutDegree>
+              </div>
+            </SecondEduWrapper>
+          </BoxWrapper>
         </BoxContainer>
-      </Container>
+
+        <CarDivider>
+          <CarTraveller>
+            <CarSvg />
+          </CarTraveller>
+        </CarDivider>
+      </EducationWrapper>
     </MainContainer>
   );
 };

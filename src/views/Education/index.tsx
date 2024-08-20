@@ -4,7 +4,9 @@ import React from 'react'
 
 const EducationHome  = () => {
   return (
-    <div> <Educations /> </div>
+    <div> 
+      <Educations /> 
+    </div>
   )
 }
 

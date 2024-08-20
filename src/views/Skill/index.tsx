@@ -1,9 +1,14 @@
-import SkillsSec from 'components/Skills'
+
+import SkillsSec from 'Components/Skills'
+import ToolsSection from 'Components/Tools'
 import React from 'react'
 
 const SkillHome = () => {
   return (
-    <div><SkillsSec /></div>
+    <div>
+      <SkillsSec />
+      <ToolsSection />
+    </div>
   )
 }
 

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  margin-top: 300px;
-  /* padding: 0px 50px; */
-  /* background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,10,241,0.6895133053221288) 22%, rgba(119,0,255,0.6446953781512605) 100%); */
-  background-color: lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
-  height:25vh;
+      /* backdrop-filter: blur(15px) !important;
+    background-color: rgba(38, 28, 55, 0.66) !important;
+    box-shadow: rgba(9, 5, 29, 0.173) 0px 10px 10px 0px !important; */
+    background-color: #0f0715;
+    padding: 20px;
 `
 export const ChildContainer = styled.div`
      display: flex;
@@ -19,14 +19,13 @@ export const ChildContainer = styled.div`
 `
 export const Heading = styled.div`
 margin-top: 20px;
-color: black;
+color:#fff;
 
 `
 export const Para = styled.div`
-width: 600px;
 text-align:center;
-margin-top:12px;
-
+color:#fff;
+font-size: 18px;
 `
 
 export const SocialSec = styled.div`

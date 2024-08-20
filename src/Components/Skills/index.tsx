@@ -1,4 +1,3 @@
-import React from "react";
 import { RiHtml5Fill, RiReactjsLine } from "react-icons/ri";
 import {
   TbBrandCss3,
@@ -15,14 +14,17 @@ import {
   WrapperContainer,
   SkilName,
 } from "style/Skill";
+import NextIcon from "assets/svg/NextIcon";
+import ReactVite from "assets/svg/ReactVite";
 
 const SkillsSec = () => {
+  const key = new Date().getTime();
   return (
     <WrapperContainer>
       <Container>
-        <Heading>
+        <Heading key={key}>
           <GiSkills />
-          Skills
+          Professional Skills
         </Heading>
         <FlexContainer>
           <SkilName>
@@ -30,11 +32,6 @@ const SkillsSec = () => {
               <RiHtml5Fill />
             </FlexItem>
             <h3
-              style={{
-                color: "white",
-                marginRight: "12px",
-                marginTop: "-15px",
-              }}
             >
               Html
             </h3>
@@ -43,36 +40,19 @@ const SkillsSec = () => {
             <FlexItem>
               <TbBrandCss3 />
             </FlexItem>
-            <h3
-              style={{
-                color: "white",
-                marginRight: "10px",
-                marginTop: "-15px",
-              }}
-            >
-              Css
-            </h3>
+            <h3>Css</h3>
           </SkilName>
           <SkilName>
             <FlexItem>
               <TbBrandJavascript />
             </FlexItem>
-            <h3
-              style={{ color: "white", marginRight: "8px", marginTop: "-15px" }}
-            >
-              JavaScript
-            </h3>
+            <h3>JavaScript</h3>
           </SkilName>
           <SkilName>
             <FlexItem>
               <RiReactjsLine />
             </FlexItem>
             <h3
-              style={{
-                color: "white",
-                marginRight: "12px",
-                marginTop: "-15px",
-              }}
             >
               React
             </h3>
@@ -81,34 +61,30 @@ const SkillsSec = () => {
             <FlexItem>
               <BiGitMerge />
             </FlexItem>
-            <h3
-              style={{ color: "white", marginRight: "8px", marginTop: "-15px" }}
-            >
-              Git
-            </h3>
+            <h3>Git</h3>
           </SkilName>
           <SkilName>
             <FlexItem>
               <TbBrandTypescript />
             </FlexItem>
             <h3
-              style={{ color: "white", marginRight: "0px", marginTop: "-15px" }}
             >
               TypeScript
             </h3>
           </SkilName>
 
           <SkilName>
-            <FlexItem>
-              <BiGitMerge />
+            <FlexItem className="next-icon">
+              <NextIcon />
             </FlexItem>
-            <h3
-              style={{ color: "white", marginRight: "8px", marginTop: "-15px" }}
-            >
-              Git
-            </h3>
+            <h3>Next Js</h3>
           </SkilName>
-          <SkilName></SkilName>
+          <SkilName>
+            <FlexItem className="next-icon">
+              <ReactVite />
+            </FlexItem>
+            <h3>React Vite</h3>
+          </SkilName>
         </FlexContainer>
       </Container>
     </WrapperContainer>

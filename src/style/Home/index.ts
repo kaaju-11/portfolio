@@ -1,33 +1,57 @@
 import { ITheme } from "interfaces";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const MainContainer = styled.div`
   width: 100%;
-  /* background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%); */
+`;
+const fadeInAndMoveDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Move from top (-50px) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
 `;
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 215px 17px 70px 17px;
+
+  &.testomonial-class{
+    flex-direction: column;
+    /* margin-bottom: 100px; */
+    padding: 80px 17px 70px 17px;
+  }
 `;
 export const LeftContainer = styled.div`
   max-width: 600px;
+  animation: ${fadeInAndMoveDown} 2s ease-in-out;
 `;
-export const Proffesion = styled.div`
-  font-size: 32px;
+export const Proffesion = styled.div<{ theme: ITheme }>`
+  font-size: 30px;
   font-weight: 700;
 
   span {
-    color: #6600cc;
+    /* color: ${(props) => props.theme.color.third};  */
+    background: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow:blue 0px 3px 1px; */
   }
   h3 {
     animation: slide 1s ease forwards;
     animation-delay: 0.7s;
+    color: ${(props) => props.theme.color.second};
   }
 `;
-export const Paragraph = styled.div`
+export const Paragraph = styled.div<{ theme: ITheme }>`
   font-size: 15px;
+  color: ${(props) => props.theme.color.second};
+  margin-top: 10px;
 `;
 export const ButtonContainer = styled.div`
   display: flex;
@@ -35,19 +59,20 @@ export const ButtonContainer = styled.div`
 `;
 
 export const SButton = styled.button`
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content:center;
-  padding: 10px;
+  cursor: pointer;
+  justify-content: center;
   font-size: 16px;
   border-radius: 10px;
   color: white;
-  width: 150px;
-  background-color: #6600cc;
-  box-shadow: 0 0 10px #6600cc;
+  width: 100%;
+  max-width: 166px;
+  border: none;
+  background-color: ${(props) => props.theme.color.fifth};
+  /* box-shadow: 0 0 7px ${(props) => props.theme.color.fourth}; */
   letter-spacing: 1px;
   font-weight: 600;
-  border: none;
 
   svg {
     font-size: 20px;
@@ -79,27 +104,29 @@ export const SButton = styled.button`
   }
 `;
 export const FButton = styled.div`
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content:center;
-  padding: 10px;
+  justify-content: center;
   font-size: 16px;
   border-radius: 10px;
-  width: 120px;
-  border: none;
+  width: 100%;
+  max-width: 166px;
+  cursor: pointer;
+  border: 1px solid ${(props) => props.theme.color.third};
+  color: ${(props) => props.theme.color.second};
   background-color: transparent;
   letter-spacing: 1px;
   font-weight: 600;
-  text-align:center;
+  text-align: center;
 
   &:hover {
-    background-color: lightgray;
     box-shadow: 0 0 10px lightgray;
   }
 
   svg {
-    font-size: 20px;
-    margin-left: 4px;
+    width: 25px;
+    height: 40px;
+    margin-left: 8px;
     text-align: center;
     animation: fadein 2.5s linear infinite;
 
@@ -116,14 +143,14 @@ export const FButton = styled.div`
 export const SocialSec = styled.div`
   display: inline-flex;
 `;
-export const AnkerTag = styled.a`
+export const AnkerTag = styled.a<{ theme: ITheme }>`
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #6600cc;
+  border: 2px solid ${(props) => props.theme.color.third};
   border-radius: 50%;
   font-size: 20px;
-  color: #6600cc;
+  color: ${(props) => props.theme.color.third};
   text-decoration: none;
   margin: 30px 15px 30px 0;
   display: inline-flex;
@@ -131,23 +158,102 @@ export const AnkerTag = styled.a`
   align-items: center;
 
   &:hover {
-    background-color: #6600cc;
+    background-color: ${(props) => props.theme.color.third};
     color: white;
-    box-shadow: 0 0 20px #6600cc;
+    box-shadow: 0 0 20px ${(props) => props.theme.color.fourth};
+    transition: all 0.75s ease;
+
   }
 `;
 export const SocialIcon = styled.div`
   font-size: 15px;
 `;
 export const RightContainer = styled.div`
-  max-width: 450px;
+  width: 100%;
+  max-width: 345px;
+  height: 300px;
+  display: flex;
+  margin-top: 49px;
+  position: relative;
+`;
+
+export const BoxContainer = styled.div`
+  border: 1px solid ${(props) => props.theme.color.second};
+  width: 50%;
+  border-right: none;
+  z-index: 1;
+  animation: fadeInAndMoveRight1 1.5s ease-out;
+  /* background-color: rgb(29 15 30); */
+
+  @keyframes fadeInAndMoveRight1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+`;
+export const SecondBoxContainer = styled.div`
+  border: 1px solid ${(props) => props.theme.color.second};
+  width: 50%;
+  border-left: none;
+  z-index: 1;
+  animation: fadeInAndMoveRight2 1.5s ease-out;
+
+  @keyframes fadeInAndMoveRight2 {
+    0% {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 `;
 export const Image = styled.img`
-  /* height:450px;
-  width:450px; */
-   width: 400px;
-  height:400px
+  position: absolute;
+  top: -68px;
+  width: 255px;
+  height: 319px;
+  right: 44px;
+  z-index: 10;
+  animation: fadeInAndMoveDown1 2s ease-in-out;
+
+  @keyframes fadeInAndMoveDown1 {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100% {
+      opacity: 5;
+      transform: translateY(0px);
+    }
+  }
 `;
+export const UploadFileModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  // position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 602px;
+  // top: 206px;
+  // left: 434px;
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px;
+  gap: 10px;
+  border: 1px solid #1b202b;
+  padding: 40px 40px;
+  background: #140c1c;
+`
 // export const NameContain = styled.div`
 //    font-size:15px;
 // `

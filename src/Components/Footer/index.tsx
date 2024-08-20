@@ -8,29 +8,16 @@ import fileSaver from 'file-saver';
 import { Button } from "style/Testomonial";
 
 const Footer = () => {
-  const saveFile = () => {
-    fileSaver.saveAs(
-      process.env.PUBLIC_URL + "/resume/cv.pdf",
-      "MyCV.pdf"
-    );
-  }
   return (
-    <CvContainer>
-      <Button onClick={saveFile}>
-    Download CV
-</Button>
-
     <FooterContainer>
       <ChildContainer>
-        <Heading style={{border:"none", color:"black"}}>Web Developer</Heading>
+        {/* <Heading>Web Developer</Heading> */}
         <Para>
-          A spcialist in UI/UX design.A passion of mine is designing and
-          solving problems through user experience,primarly on modern web
-          UI.A passion of mine is designing and
-          solving problems through user experience,primarly on modern web
-          UI.
+        {/* Designed and Developed by Kajal Raj  */}
+        © 2024 All rights reserved by Kajal Raj
+        {/* © 2024 All rights reserved by ThemeJunction */}
         </Para>
-        <SocialSec>
+        {/* <SocialSec>
           <AnkerTag href="#">
             <FaFacebookF />
           </AnkerTag>
@@ -46,10 +33,9 @@ const Footer = () => {
           <AnkerTag href="#">
             <RiGitlabFill />
           </AnkerTag>
-        </SocialSec>
+        </SocialSec> */}
       </ChildContainer>
     </FooterContainer>
-    </CvContainer>
   );
 };
 

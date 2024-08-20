@@ -6,7 +6,7 @@ import { GrSend } from "react-icons/gr";
 import {TbCircleArrowUpRight} from "react-icons/tb"
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
 import Typewriter from "typewriter-effect";
-import portimage from "assets/images/portfo.jpeg"
+import portimage from "assets/images/resumeimage.jpg"
 import {
   MainContainer,
   Container,
@@ -18,12 +18,21 @@ import {
   SButton,
   SocialSec,
   AnkerTag,
-  SocialIcon,
   RightContainer,
   Image,
+  BoxContainer,
+  SecondBoxContainer,
 } from "style/Home";
+import DownloadIcon from "assets/svg/DownloadIcon";
+import fileSaver from "file-saver";
 
 const HomeSec = () => {
+  const saveFile = () => {
+    fileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resume/cv.pdf",
+      "MyCV.pdf"
+    );
+  }
   return (
     <MainContainer>
       <Container>
@@ -37,8 +46,8 @@ const HomeSec = () => {
                   options={{
                     autoStart: true,
                     loop: true,
-                    delay: 40,
-                    strings: ["Web Developer", "Frontend Developer", "UI Developer"],
+                    delay: 45,
+                    strings: ["Web Developer","Software Engineer", "Frontend Developer","Open Source Contributor", "UI Developer"],
                   }}
                 />
               </span>
@@ -69,11 +78,19 @@ const HomeSec = () => {
 
           <ButtonContainer>
             <SButton>Let's Talk<GrSend /></SButton>
-            <FButton>Projects<TbCircleArrowUpRight /></FButton>
+            <FButton onClick={saveFile}>Download CV
+              {/* <TbCircleArrowUpRight /> */}
+              <DownloadIcon />
+              </FButton>
           </ButtonContainer>
         </LeftContainer>
         <RightContainer>
+
+          <BoxContainer></BoxContainer>
+          <SecondBoxContainer></SecondBoxContainer>
+          
           <Image src={portimage} />
+
         </RightContainer>
       </Container>
     </MainContainer>

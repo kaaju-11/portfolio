@@ -1,3 +1,12 @@
+
+import Apple from 'assets/svg/Apple';
+import Digilocker from 'assets/svg/Digilocker';
+import Google from 'assets/svg/Google';
+import Phone from 'assets/svg/Phone';
+import Canvas from 'Components/Canvas';
+import Sidebar from 'Components/Sidebar';
+import React, { useState } from 'react';
+import StarryBackground from "Components/Spiral";
 import ContactHome from "views/Contact";
 import EducationHome from "views/Education";
 import FooterHome from "views/Footer";
@@ -6,7 +15,8 @@ import NavHome from "views/Navbar";
 import SkillHome from "views/Skill";
 import TestoHome from "views/Testomonial";
 
-const Home = () => {
+const Home: React.FC = () => {
+
   return (
     <div>
       <NavHome />
@@ -14,6 +24,7 @@ const Home = () => {
       <SkillHome />
       <EducationHome />
       <TestoHome />
+      <StarryBackground />
       <ContactHome />
       <FooterHome />
     </div>
