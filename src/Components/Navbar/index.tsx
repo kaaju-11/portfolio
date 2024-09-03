@@ -36,7 +36,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { AiOutlineHome } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { MdOutlineEventNote, MdOutlinePermContactCalendar } from 'react-icons/md';
 import { RiContactsFill } from 'react-icons/ri';
