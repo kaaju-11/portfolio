@@ -1,4 +1,3 @@
-import React from "react";
 import {
   RoadMapContent,
   RoadMapContentHeading,
@@ -14,7 +13,6 @@ import {
   RoadMapHeadingWrapperD1,
   RoadMapHeadingWrapperD2,
   RoadMapHeadingWrapperD3,
-  RoadMapParagraphWrapper,
   RoadMapStyle,
   RoadMapEleR,
   RoadMapEleL,

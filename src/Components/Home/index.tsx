@@ -3,7 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrSend } from "react-icons/gr";
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
 import Typewriter from "typewriter-effect";
-import portimage from "assets/images/resumeimage.jpg"
+import portimage from "assets/images/resume-image.jpg"
 import {
   MainContainer,
   Container,
@@ -56,21 +56,21 @@ const HomeSec = () => {
             world.
           </Paragraph>
           <SocialSec>
-            <AnkerTag href="#">
+            {/* <AnkerTag href="#">
               <FaFacebookF />
-            </AnkerTag>
-            <AnkerTag href="#">
+            </AnkerTag> */}
+            <AnkerTag href="https://www.instagram.com/kaaju_.12/?next=%2F&hl=en">
               <RiInstagramFill />
             </AnkerTag>
-            <AnkerTag href="#">
+            <AnkerTag href="https://www.linkedin.com/in/kajal-raj">
               <AiFillLinkedin />
             </AnkerTag>
-            <AnkerTag href="#">
+            <AnkerTag href="https://github.com/kaaju-11">
               <AiOutlineGithub />
             </AnkerTag>
-            <AnkerTag href="#">
+            {/* <AnkerTag href="#">
               <RiGitlabFill />
-            </AnkerTag>
+            </AnkerTag> */}
           </SocialSec>
 
           <ButtonContainer>

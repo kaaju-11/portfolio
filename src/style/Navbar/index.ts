@@ -81,7 +81,7 @@ export const Navbar = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 999;
-  padding: 0px 170px;
+  padding: 0px 100px;
   font-family: 'Ubuntu', sans-serif;
   transition: all 0.3s ease;
 

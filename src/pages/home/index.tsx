@@ -11,14 +11,33 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <NavHome />
+      {/* <NavHome />
       <HomePge />
       <SkillHome />
       <EducationHome />
-      {/* <TestoHome /> */}
+      <TestoHome />
       <StarryBackground />
       <ContactHome />
+      <FooterHome /> */}
+      <div>
+      <NavHome />
+      <div id="home">
+        <HomePge />
+      </div>
+      <div id="skills">
+        <SkillHome />
+      </div>
+      <div id="education">
+        <EducationHome />
+      </div>
+      <div id="background">
+        <StarryBackground />
+      </div>
+      <div id="contact">
+        <ContactHome />
+      </div>
       <FooterHome />
+    </div>
     </div>
   );
 };

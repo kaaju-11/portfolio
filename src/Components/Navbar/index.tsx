@@ -35,11 +35,13 @@
 
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineHome } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { MdOutlineEventNote, MdOutlinePermContactCalendar } from 'react-icons/md';
 import { RiContactsFill } from 'react-icons/ri';
-import { HomeContent, Listitems, LogoWrapper, Navbar, ScrollUpBtn, Section, Unorderli } from 'style/Navbar';
+import { Listitems, LogoWrapper, Navbar, Unorderli } from 'style/Navbar';
+import { FaArrowUp } from 'react-icons/fa'; // Add an icon for the scroll-up button
 
 const NavbarComponent: React.FC = () => {
   const [isSticky, setSticky] = useState(false);
@@ -69,41 +71,58 @@ const NavbarComponent: React.FC = () => {
       <Navbar className={isSticky ? 'sticky' : ''}>
         <div className="max-width">
           <LogoWrapper>
-              <a href="/">@KAJAL</a>
-            </LogoWrapper>
+            <Link to="/">@KAJAL</Link>
+          </LogoWrapper>
           <Unorderli>
-            <Listitems>
+            {/* <Listitems>
               <AiOutlineHome />
-              <a href="/">Home</a>
-            </Listitems>
+              <a href="#home">Home</a>
+            </Listitems> */}
             <Listitems>
               <MdOutlineEventNote />
-              <a href="#">About</a>
+              <a href="#home">About</a>
             </Listitems>
             <Listitems>
               <RiContactsFill />
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </Listitems>
             <Listitems>
               <FaProjectDiagram />
-              <a href="#">Projects</a>
+              <a href="#contact">Projects</a>
             </Listitems>
             <Listitems>
               <MdOutlinePermContactCalendar />
-              <a href="/Components/Education">Education</a>
+              <a href="#education">Education</a>
             </Listitems>
             {/* <Listitems>
               <RiContactsFill />
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </Listitems> */}
           </Unorderli>
-        
         </div>
       </Navbar>
+
+      {scrollUpBtnVisible && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: '50px',
+            right: '30px',
+            backgroundColor: '#964fdd',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '50%',
+            padding: '10px',
+            cursor: 'pointer',
+            zIndex: 1000,
+          }}
+        >
+          <FaArrowUp />
+        </button>
+      )}
     </div>
   );
 };
 
 export default NavbarComponent;
-
-
