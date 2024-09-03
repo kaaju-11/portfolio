@@ -1,11 +1,4 @@
 
-import Apple from 'assets/svg/Apple';
-import Digilocker from 'assets/svg/Digilocker';
-import Google from 'assets/svg/Google';
-import Phone from 'assets/svg/Phone';
-import Canvas from 'Components/Canvas';
-import Sidebar from 'Components/Sidebar';
-import React, { useState } from 'react';
 import StarryBackground from "Components/Spiral";
 import ContactHome from "views/Contact";
 import EducationHome from "views/Education";
@@ -23,7 +16,7 @@ const Home: React.FC = () => {
       <HomePge />
       <SkillHome />
       <EducationHome />
-      <TestoHome />
+      {/* <TestoHome /> */}
       <StarryBackground />
       <ContactHome />
       <FooterHome />

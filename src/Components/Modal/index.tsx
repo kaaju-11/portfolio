@@ -33,7 +33,7 @@
 //     control,
 //     reset,
 //     formState: { errors },
-//   } = useForm<FormValues>({
+//   } = useForm({
 //     mode: "onSubmit",
 //     reValidateMode: "onChange",
 //     resolver: yupResolver(CONTACTUS_VALIDATION_SCHEMA),

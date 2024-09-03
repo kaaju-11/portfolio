@@ -77,7 +77,7 @@ const HomeSec = () => {
           </SocialSec>
 
           <ButtonContainer>
-            <SButton>Let's Talk<GrSend /></SButton>
+            <SButton href="https://www.linkedin.com/in/kajal-raj" target="_blank" rel="noopener noreferrer">Let's Talk<GrSend /></SButton>
             <FButton onClick={saveFile}>Download CV
               {/* <TbCircleArrowUpRight /> */}
               <DownloadIcon />

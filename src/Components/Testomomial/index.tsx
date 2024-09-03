@@ -29,7 +29,7 @@
 //       }}
 //       onClick={onClick}
 //     >
-//       <ForwardOutlined />
+//       <ForwardOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
 //     </div>
 //   );
 // };
@@ -51,7 +51,7 @@
 //       }}
 //       onClick={onClick}
 //     >
-//       <BackwardOutlined />
+//       <BackwardOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
 //     </div>
 //   );
 // };

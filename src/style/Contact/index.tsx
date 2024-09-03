@@ -96,6 +96,9 @@ const RoadMapContentHeading = styled.h3`
   font-weight: 300;
   font-size: 32px;
   line-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin: 0;
 
   color: rgba(255, 255, 255, 0.66);

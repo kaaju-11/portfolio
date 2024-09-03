@@ -58,7 +58,7 @@ export const ButtonContainer = styled.div`
   gap: 10px;
 `;
 
-export const SButton = styled.button`
+export const SButton = styled.a`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -70,7 +70,7 @@ export const SButton = styled.button`
   max-width: 166px;
   border: none;
   background-color: ${(props) => props.theme.color.fifth};
-  /* box-shadow: 0 0 7px ${(props) => props.theme.color.fourth}; */
+  text-decoration: none;
   letter-spacing: 1px;
   font-weight: 600;
 

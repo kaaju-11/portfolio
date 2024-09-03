@@ -45,11 +45,11 @@ const Projects = () => {
           <RoadMapHeadingWrapperD1 />
           <RoadMapHeadingWrapperD2>
             <RoadMapHeadingH>PROJECTS</RoadMapHeadingH>
-            <RoadMapParagraphWrapper>
+            {/* <RoadMapParagraphWrapper>
               The oil is produced at the source using a robust and
               modernsolvent-free extraction system, designed in conjunction with
               Texarome's technology to obtain a high quality product.
-            </RoadMapParagraphWrapper>
+            </RoadMapParagraphWrapper> */}
           </RoadMapHeadingWrapperD2>
           <RoadMapHeadingWrapperD3 />
         </RoadMapHeadingWrapper>
@@ -63,9 +63,10 @@ const Projects = () => {
           <RoadMapGenticD2>
             <RoadMapContent>
               <RoadMapContentHeading>
-                Blog Project (April2023-April2023 )
+                <RoadMapContentNumber>01.</RoadMapContentNumber>Blog Project
+                (April2023-April2023 )
               </RoadMapContentHeading>
-              <RoadMapContentNumber>01</RoadMapContentNumber>
+              {/* <RoadMapContentNumber>01</RoadMapContentNumber> */}
               <RoadMapContentParagraph>
                 This Blog Website is made with Front-end and Back-end. In this
                 website, proper authentication is used. In the front-end, I have
@@ -85,9 +86,9 @@ const Projects = () => {
           <RoadMapEleR>
             <RoadMapContentEleR>
               <RoadMapContentHeading>
-                Music Player Project (May2022-May2022 )
+                <RoadMapContentNumber>02.</RoadMapContentNumber>Music Player
+                Project (May2022-May2022 )
               </RoadMapContentHeading>
-              <RoadMapContentNumber>02</RoadMapContentNumber>
               <RoadMapContentParagraph>
                 This project was to develop the user interface of an online
                 music player. This project was developed using HTML,CSS and
@@ -117,12 +118,17 @@ const Projects = () => {
           </RoadMapEmptyDiv>
           <RoadMapEleL>
             <RoadMapContent>
-              <RoadMapContentHeading>Processing</RoadMapContentHeading>
-              <RoadMapContentNumber>03</RoadMapContentNumber>
+              <RoadMapContentHeading>
+                <RoadMapContentNumber>03.</RoadMapContentNumber>Plan-IT
+              </RoadMapContentHeading>
               <RoadMapContentParagraph>
-                The oil is produced at the source using a robust and modern
-                solvent-free extraction system, designed in conjunction with
-                Texarome's technology to obtain a high quality product.
+                Streamlining software projects with customizable workflows, task
+                assignments, and progress tracking. Implemented a drag-and-drop
+                interface for the dashboard, allowing tasks to be moved
+                according to status (To Do, In Progress, Unit Testing, QA Ready,
+                Done) antd enabling unlimited task creation. Developed and
+                enhanced frontend features using React.js, integrated Ant Design
+                (antd) components.
               </RoadMapContentParagraph>
             </RoadMapContent>
           </RoadMapEleL>
@@ -135,12 +141,18 @@ const Projects = () => {
           <RoadMapEmptyDiv />
           <RoadMapEleR style={{ transform: " translate(48px, 8px)" }}>
             <RoadMapContentEleR>
-              <RoadMapContentHeading>Rectification</RoadMapContentHeading>
-              <RoadMapContentNumber>04</RoadMapContentNumber>
+              <RoadMapContentHeading>
+                <RoadMapContentNumber>04.</RoadMapContentNumber>Basic Mining
+              </RoadMapContentHeading>
               <RoadMapContentParagraph>
-                Low temperature molecular rectification preserves the fragile
-                floral compounds specific to each varietal in order to remain
-                true to the authentic aroma profile of the fresh flower.
+                Collaborated closely with backend teams to integrate APIs and
+                backend logic into a responsive e-commerce platform for managing
+                Bitcoin mining devices. Worked on implementing dynamic user
+                interfaces to handle auction management, sales processes, and
+                payment method integration. Focused on delivering a seamless and
+                secure transaction experience for users, ensuring that the
+                frontend interfaces provided real-time updates and intuitive
+                navigation throughout the purchase journey.
               </RoadMapContentParagraph>
             </RoadMapContentEleR>
           </RoadMapEleR>
@@ -165,13 +177,20 @@ const Projects = () => {
           </RoadMapEmptyDiv>
           <RoadMapEleL style={{ transform: " translate(10px, 4px)" }}>
             <RoadMapContent>
-              <RoadMapContentHeading>R & D </RoadMapContentHeading>
-              <RoadMapContentNumber>05</RoadMapContentNumber>
+              <RoadMapContentHeading>
+                <RoadMapContentNumber>05.</RoadMapContentNumber>Earn Alliance
+                Admin Portal
+              </RoadMapContentHeading>
               <RoadMapContentParagraph>
-                At the forefront of R&D, our PHD chemists and engineers use
-                GC-MS, HPLC, headspace, and preparative chromatography in our QC
-                lab to guide the farming, production, and product development
-                processes.
+                "Developed and managed a fully functional admin portal for Earn
+                Alliance using React. Led the creation of an intuitive and
+                responsive UI, ensuring a seamless user experience across the
+                platform. Integrated APIs for real-time data management and
+                created dynamic, reusable components to optimize performance and
+                scalability. The admin panel efficiently handled user
+                management, content updates, and badges, games, Challenges, NFT
+                and contributing to the streamlined administration of the
+                platform."
               </RoadMapContentParagraph>
             </RoadMapContent>
           </RoadMapEleL>
@@ -184,13 +203,19 @@ const Projects = () => {
           <RoadMapEmptyDiv />
           <RoadMapEleR style={{ transform: " translate(40px, 1px)" }}>
             <RoadMapContentEleR>
-              <RoadMapContentHeading>Regulatory</RoadMapContentHeading>
-              <RoadMapContentNumber>06</RoadMapContentNumber>
+              <RoadMapContentHeading>
+                <RoadMapContentNumber>06.</RoadMapContentNumber>Portfolio
+              </RoadMapContentHeading>
+
               <RoadMapContentParagraph>
-                The in-house legal team with more than x years of experience,
-                guides the regulatory department while also employing 3rd-party
-                oversight to guarantee the absence of pesticide, heavy metal,
-                residual solvent, and other regulated contaminants.
+                Developed a fully responsive and dynamic portfolio website using
+                React, Ant Design, and TypeScript. Leveraged Ant Design's
+                library to create a clean, modern UI that effectively showcases
+                my projects, skills, and experience. Implemented TypeScript to
+                ensure strong typing and maintainable code, enhancing overall
+                project scalability. The portfolio includes smooth navigation,
+                interactive elements, and is optimized for performance across
+                all devices.
               </RoadMapContentParagraph>
             </RoadMapContentEleR>
           </RoadMapEleR>
@@ -222,12 +247,14 @@ const Projects = () => {
             }}
           >
             <RoadMapContent>
-              <RoadMapContentHeading>Quality Assurance</RoadMapContentHeading>
-              <RoadMapContentNumber>07</RoadMapContentNumber>
+              <RoadMapContentHeading><RoadMapContentNumber>07.</RoadMapContentNumber>NPS (National Pension Scheme)</RoadMapContentHeading>
+              
               <RoadMapContentParagraph>
-                The products are contained in a refrigerated vault and can be
-                traced down to the farm level by batch and specific rows and
-                plots, according to the certified ISO 9000 protocol.
+                `Orchestrator-workflow-manager` is designed to help manage
+                workflows, funnels, and rules through a set of RESTful APIs.
+                This system allows users to create, read, update, and delete
+                workflows, funnels, and rules efficiently.The project follows a
+                modular structure to ensure scalability and maintainability
               </RoadMapContentParagraph>
             </RoadMapContent>
           </RoadMapEleL>
