@@ -1,7 +1,6 @@
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
 import { GrSend } from "react-icons/gr";
-import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
+import { RiInstagramFill } from "react-icons/ri";
 import Typewriter from "typewriter-effect";
 import portimage from "assets/images/resume-image.jpg"
 import {
