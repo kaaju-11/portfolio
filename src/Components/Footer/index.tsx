@@ -1,11 +1,4 @@
-import React from "react";
-import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
-import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
-import { ChildContainer, FooterContainer, Para, AnkerTag, SocialSec,CvContainer  } from "style/Footer";
-import { Heading } from "style/Skill";
-import fileSaver from 'file-saver';
-import { Button } from "style/Testomonial";
+import { ChildContainer, FooterContainer, Para } from "style/Footer";
 
 const Footer = () => {
   return (

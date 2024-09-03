@@ -1,9 +1,6 @@
-import React from "react";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { GrSend } from "react-icons/gr";
-// import {IoArrowRedoCircleOutline} from "react-icons/io"
-import {TbCircleArrowUpRight} from "react-icons/tb"
 import { RiGitlabFill, RiInstagramFill } from "react-icons/ri";
 import Typewriter from "typewriter-effect";
 import portimage from "assets/images/resumeimage.jpg"

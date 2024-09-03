@@ -17,7 +17,7 @@ import HasuraIcon from "assets/svg/HasuraIcon";
 
 const SkillsSec = () => {
   const key = new Date().getTime();
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     triggerOnce: true, // Animation occurs only once
     threshold: 0.2, // 20% of the component should be in view to trigger the animation
   });
