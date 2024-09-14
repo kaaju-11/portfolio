@@ -147,7 +147,7 @@ const RoadMapEleR = styled.div`
   border-radius: 0px 30px 30px 0px;
   transform: translate(42px, 14px);
   padding: 42px 130px 70px 0px;
-  text-align: right;
+  /* text-align: right; */
 `;
 const RoadMapContentEleR = styled.div`
   display: grid;
